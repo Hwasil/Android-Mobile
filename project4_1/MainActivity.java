@@ -88,45 +88,43 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnDiv.setOnTouchListener(new View.OnTouchListener() { // 나누기
+        btnDiv.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
-                
-                // 둘다 공백일 때, 둘다 0일 때 제외. 하나는 공백, 다른 하나는 0일 때 메시지가 어떻게 출력될 것인가 의문
+
                 if ((num1.equals("")) || (num2.equals(""))) {
-                    /*
-                    if ((num1.equals(0)) || (num2.equals(0))) { 
-                        Toast.makeText(getApplicationContext(), "계산할 수 없습니다.", Toast.LENGTH_SHORT).show();
-                    } */
                     Toast.makeText(getApplicationContext(), "값을 입력하세요!", Toast.LENGTH_SHORT).show();
-                } else if ((num1.equals(0)) || (num2.equals(0))) { //
-                    Toast.makeText(getApplicationContext(), "0은 계산할 수 없습니다.", Toast.LENGTH_SHORT).show();
+                }
+                else if ( num1.equals("0") || (num2.equals("0"))) {
+                    Toast.makeText(getApplicationContext(), "계산할 수 없습니다.", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     result = Double.parseDouble(num1) / Double.parseDouble(num2);
-                    textResult.setText("계산 결과 : " + result.toString());
+                    //String result1 = String.format("%.2f", result);
+                    textResult.setText("계산 결과 : " + String.format("%.2f", result));
                 }
                 return false;
             }
         });
 
-        btnRem.setOnTouchListener(new View.OnTouchListener() { // 나머지
+        btnRem.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
-                
+
                 if ((num1.equals("")) || (num2.equals(""))) {
                     Toast.makeText(getApplicationContext(), "값을 입력하세요!", Toast.LENGTH_SHORT).show();
                 }
-                else if ((num1.equals(0)) || (num2.equals(0))) { //
-                    Toast.makeText(getApplicationContext(), "0은 계산할 수 없습니다.", Toast.LENGTH_SHORT).show();
+                else if ((num1.equals("0")) || (num2.equals("0"))) {
+                    Toast.makeText(getApplicationContext(), "계산할 수 없습니다.", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     result = Double.parseDouble(num1) % Double.parseDouble(num2);
-                    textResult.setText("계산 결과 : " + result.toString());
+                    //String result1 = String.format("%.2f", result);
+                    textResult.setText("계산 결과 : " + String.format("%.2f", result));
                 }
                 return false;
             }
