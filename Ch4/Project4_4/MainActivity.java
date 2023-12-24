@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("202195027 오화실");
+        setTitle("애완동물 사진 보기");
 
         textView2 = (TextView) findViewById(R.id.textView2);
         chkAgree = (Switch) findViewById(R.id.chkAgree);
