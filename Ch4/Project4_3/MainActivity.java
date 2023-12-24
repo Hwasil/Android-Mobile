@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("초간단 계산기_202195027 오화실");
+        setTitle("초간단 계산기");
 
         edit1 = (EditText) findViewById(R.id.Edit1);
         edit2 = (EditText) findViewById(R.id.Edit2);
