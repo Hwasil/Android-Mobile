@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvToday1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="하루 열량 필요량"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvNece"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvToday2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="하루 섭취 열량"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvEat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvToday3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="활동 에너지 소모량"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvRun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnEat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="식단 입력" />
+
+    <Button
+        android:id="@+id/btnRun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="활동량 입력" />
+
+</LinearLayout>
